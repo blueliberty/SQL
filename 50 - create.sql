@@ -4,14 +4,14 @@ CREATE TABLE teacher(
     tname VARCHAR(20) NOT NULL
 );
 
-INSERT INTO teacher(tno,tname)VALUES(1,'张老师'),
-INSERT INTO teacher(tno,tname)VALUES(2,'王老师');
-INSERT INTO teacher(tno,tname)VALUES(3,'李老师');
-INSERT INTO teacher(tno,tname)VALUES(4,'赵老师');
-INSERT INTO teacher(tno,tname)VALUES(5,'刘老师');
-INSERT INTO teacher(tno,tname)VALUES(6,'向老师');
-INSERT INTO teacher(tno,tname)VALUES(7,'李文静');
-INSERT INTO teacher(tno,tname)VALUES(8,'叶平');
+INSERT INTO teacher(tno,tname) VALUES(1,'张老师');
+INSERT INTO teacher(tno,tname) VALUES(2,'王老师');
+INSERT INTO teacher(tno,tname) VALUES(3,'李老师');
+INSERT INTO teacher(tno,tname) VALUES(4,'赵老师');
+INSERT INTO teacher(tno,tname) VALUES(5,'刘老师');
+INSERT INTO teacher(tno,tname) VALUES(6,'向老师');
+INSERT INTO teacher(tno,tname) VALUES(7,'李文静');
+INSERT INTO teacher(tno,tname) VALUES(8,'叶平');
 
 -- 学生表
 CREATE TABLE student(
@@ -41,11 +41,11 @@ ALTER TABLE course
 ADD CONSTRAINT fk_course_teacher
 FOREIGN KEY (tno) REFERENCES teacher (tno);
 
-insert into course(cno,cname,tno) values(1,'企业管理',3);
-insert into course(cno,cname,tno) values(2,'马克思',1);
-insert into course(cno,cname,tno) values(3,'UML',2);
-insert into course(cno,cname,tno) values(4,'数据库',5);
-insert into course(cno,cname,tno) values(5,'物理',8);
+INSERT INTO course(cno,cname,tno) VALUES(1,'企业管理',3);
+INSERT INTO course(cno,cname,tno) VALUES(2,'马克思',1);
+INSERT INTO course(cno,cname,tno) VALUES(3,'UML',2);
+INSERT INTO course(cno,cname,tno) VALUES(4,'数据库',5);
+INSERT INTO course(cno,cname,tno) VALUES(5,'物理',8);
 
 -- 创建成绩表
 CREATE TABLE sc(
@@ -62,38 +62,38 @@ ALTER TABLE sc
 ADD CONSTRAINT fk_sc_student
 FOREIGN KEY (sno) REFERENCES student (sno);
 
-INSERT INTO sc(sno,cno,score)VALUES(1,1,80);
-INSERT INTO sc(sno,cno,score)VALUES(1,2,86);
-INSERT INTO sc(sno,cno,score)VALUES(1,3,83);
-INSERT INTO sc(sno,cno,score)VALUES(1,4,89);
+INSERT INTO sc(sno,cno,score) VALUES(1,1,80);
+INSERT INTO sc(sno,cno,score) VALUES(1,2,86);
+INSERT INTO sc(sno,cno,score) VALUES(1,3,83);
+INSERT INTO sc(sno,cno,score) VALUES(1,4,89);
 
-INSERT INTO sc(sno,cno,score)VALUES(2,1,50);
-INSERT INTO sc(sno,cno,score)VALUES(2,2,36);
-INSERT INTO sc(sno,cno,score)VALUES(2,3,43);
-INSERT INTO sc(sno,cno,score)VALUES(2,4,59);
+INSERT INTO sc(sno,cno,score) VALUES(2,1,50);
+INSERT INTO sc(sno,cno,score) VALUES(2,2,36);
+INSERT INTO sc(sno,cno,score) VALUES(2,3,43);
+INSERT INTO sc(sno,cno,score) VALUES(2,4,59);
 
-INSERT INTO sc(sno,cno,score)VALUES(3,1,50);
-INSERT INTO sc(sno,cno,score)VALUES(3,2,96);
-INSERT INTO sc(sno,cno,score)VALUES(3,3,73);
-INSERT INTO sc(sno,cno,score)VALUES(3,4,69);
+INSERT INTO sc(sno,cno,score) VALUES(3,1,50);
+INSERT INTO sc(sno,cno,score) VALUES(3,2,96);
+INSERT INTO sc(sno,cno,score) VALUES(3,3,73);
+INSERT INTO sc(sno,cno,score) VALUES(3,4,69);
 
-INSERT INTO sc(sno,cno,score)VALUES(4,1,90);
-INSERT INTO sc(sno,cno,score)VALUES(4,2,36);
-INSERT INTO sc(sno,cno,score)VALUES(4,3,88);
-INSERT INTO sc(sno,cno,score)VALUES(4,4,99);
+INSERT INTO sc(sno,cno,score) VALUES(4,1,90);
+INSERT INTO sc(sno,cno,score) VALUES(4,2,36);
+INSERT INTO sc(sno,cno,score) VALUES(4,3,88);
+INSERT INTO sc(sno,cno,score) VALUES(4,4,99);
 
-INSERT INTO sc(sno,cno,score)VALUES(5,1,90);
-INSERT INTO sc(sno,cno,score)VALUES(5,2,96);
-INSERT INTO sc(sno,cno,score)VALUES(5,3,98);
-INSERT INTO sc(sno,cno,score)VALUES(5,4,99);
+INSERT INTO sc(sno,cno,score) VALUES(5,1,90);
+INSERT INTO sc(sno,cno,score) VALUES(5,2,96);
+INSERT INTO sc(sno,cno,score) VALUES(5,3,98);
+INSERT INTO sc(sno,cno,score) VALUES(5,4,99);
 
-INSERT INTO sc(sno,cno,score)VALUES(6,1,70);
-INSERT INTO sc(sno,cno,score)VALUES(6,2,66);
-INSERT INTO sc(sno,cno,score)VALUES(6,3,58);
-INSERT INTO sc(sno,cno,score)VALUES(6,4,79);
+INSERT INTO sc(sno,cno,score) VALUES(6,1,70);
+INSERT INTO sc(sno,cno,score) VALUES(6,2,66);
+INSERT INTO sc(sno,cno,score) VALUES(6,3,58);
+INSERT INTO sc(sno,cno,score) VALUES(6,4,79);
 
-INSERT INTO sc(sno,cno,score)VALUES(7,1,80);
-INSERT INTO sc(sno,cno,score)VALUES(7,2,76);
-INSERT INTO sc(sno,cno,score)VALUES(7,3,68);
-INSERT INTO sc(sno,cno,score)VALUES(7,4,59);
-INSERT INTO sc(sno,cno,score)VALUES(7,5,89);
+INSERT INTO sc(sno,cno,score) VALUES(7,1,80);
+INSERT INTO sc(sno,cno,score) VALUES(7,2,76);
+INSERT INTO sc(sno,cno,score) VALUES(7,3,68);
+INSERT INTO sc(sno,cno,score) VALUES(7,4,59);
+INSERT INTO sc(sno,cno,score) VALUES(7,5,89);
