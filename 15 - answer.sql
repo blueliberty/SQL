@@ -54,7 +54,7 @@ update sc set score = (select avg(sc_2.score) from sc sc_2 where sc_2.cno=sc.cno
 from course,teacher where course.cno=sc.cno and course.tno=teacher.tno and teacher.tname='刘老师';
 
 --my answer
---创建测试表
+--创建测试表sc1
 CREATE TABLE sc1(
     sno int NOT NULL,
     cno int NOT NULL,
@@ -86,9 +86,12 @@ INSERT INTO sc
 SELECT *
 FROM sc1;
 
+--删除sc1
+DROP TABLE sc1;
+
 ------------------------------------------------------------------
 --14、查询和2号同学学习的课程完全相同的其他同学学号和姓名；
---思路：课程完全相同 转化为 课程号的总和、均值完全相同 从而可以 使用聚合函数
+--思路：课程完全相同 转化为 课程号的总和、均值完全相同 从而可以使用聚合函数
 --given answer
 select b.sno, b.sname
 from sc a, student b
@@ -117,7 +120,7 @@ delete sc from course, teacher
 where course.cno = sc.cno and course.tno = teacher.tno and tname = '叶平';
 
 --my answer
---创建测试表
+--创建测试表sc1
 CREATE TABLE sc1(
     sno int NOT NULL,
     cno int NOT NULL,
@@ -141,3 +144,6 @@ TRUNCATE TABLE sc;
 INSERT INTO sc
 SELECT *
 FROM sc1;
+
+--删除sc1
+DROP TABLE sc1;
