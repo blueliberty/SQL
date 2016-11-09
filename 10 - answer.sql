@@ -133,7 +133,7 @@ WHERE sno IN (SELECT a.sno
 			  AND a.score > b.score);
 
 ------------------------------------------------------------------
---9、查询所有课程成绩小于60分的同学的学号、姓名；
+--9、查询课程成绩全部小于60分的同学的学号、姓名；
 --思路：所有成绩小于60 其补集为 有至少一门成绩大于60
 --given answer
 select sno, sname from student
@@ -147,7 +147,7 @@ WHERE sno NOT IN (SELECT DISTINCT sno
 				  WHERE score > 60);
 
 ------------------------------------------------------------------
---10、查询所有课程成绩大于60分的同学的学号、姓名；
+--10、查询课程成绩全部大于60分的同学的学号、姓名；
 --思路：与第9题相同
 --given answer
 select sno,sname from student
